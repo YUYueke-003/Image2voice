@@ -1,0 +1,61 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Front Page",
+				"navigationBarBackgroundColor": "#6a5acd",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages/list/list",
+			"style" : 
+			{
+				"navigationBarTitleText" : "Upload page",
+				"navigationBarBackgroundColor": "#4682b4",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path" : "pages/about/about",
+			"style" : 
+			{
+				"navigationBarTitleText" : "About us",
+				"navigationBarBackgroundColor": "#4682b4",
+				"navigationBarTextStyle": "white"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#800080",
+		"list": [
+			{
+				"text": "Front Page",
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/images/home.png",
+				"selectedIconPath": "/static/images/home_select.png"
+			},
+			{
+				"text": "Upload Page",
+				"pagePath": "pages/list/list",
+				"iconPath": "/static/images/upload.png",
+				"selectedIconPath": "/static/images/upload_select.png"
+			},
+			{
+				"text": "About Us",
+				"pagePath": "pages/about/about",
+				"iconPath": "/static/images/about.png",
+				"selectedIconPath": "/static/images/about_select.png"
+			}
+		]
+	}
+}
