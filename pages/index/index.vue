@@ -1,7 +1,8 @@
 <template>
 	<view>
-		<page-head :title="title"></page-head>
-		<text class="section-title"> Select from Scroller </text>
+		<view class="section-container">
+			<text class="section-title"> Select from Scroller </text>
+		</view>
 		<scroll-view class="scroll" scroll-x="true" show-scrollbar="true">
 			<view class="scroll-group-H">
 				<view class="scroll-item">
@@ -19,23 +20,18 @@
 			</view>
 		</scroll-view>
 		
-		<text class="section-title"> Select from Swiper </text>
+		<view class="section-container">
+			<text class="section-title"> Select from Swiper </text>
+		</view>
 		<swiper class="swiper" autoplay="true" circular="true" interval="2000" indicator-dots="true">
-			<swiper-item class="swiper-item">
-				<image src="/static/images/NewYorker_1.jpg" mode="aspectFit"></image>
-			</swiper-item>
-			<swiper-item class="swiper-item">
-				<image src="/static/images/NewYorker_2.jpg" mode="aspectFit"></image>
-			</swiper-item>
-			<swiper-item class="swiper-item">
-				<image src="/static/images/NewYorker_3.jpg" mode="aspectFit"></image>
-			</swiper-item>
-			<swiper-item class="swiper-item">
-				<image src="/static/images/NewYorker_4.jpg" mode="aspectFit"></image>
+			<swiper-item class="swiper-item" v-for="item in [1,2,3,4]">
+				<image :src="'/static/images/NewYorker_'+item+'.jpg'" mode="aspectFit"></image>
 			</swiper-item>
 		</swiper>
 		
-		<text class="section-title"> Click to see hidden text </text>
+		<view class="section-container">
+			<text class="section-title"> Click to see hidden text </text>
+		</view>
 		<view class="uni-padding-wrap uni-common-mt">
 			<view class="text-box" scroll-y="true">
 				<text>{{text}}</text>
@@ -46,7 +42,7 @@
 			</view>
 		</view>
 		
-		<view style="height: 200rpx;"></view>
+		<view style="height: 100rpx;"></view>
 	</view>
 </template>
 
@@ -89,25 +85,36 @@
 </script>
 
 <style lang="scss">
+	page{
+		justify-content: center;
+		min-height: 100vh;
+		background-color: #f0f0f0;
+	}
 	.text-box {
 		margin-bottom: 40rpx;
 		padding: 40rpx 0;
 		display: flex;
 		min-height: 300rpx;
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		font-size: 30rpx;
 		color: #353535;
 		line-height: 1.8;
+		border: 1px solid #e0e0e0;
+		border-radius: 12px;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 	}
 	.scroll{
 		.scroll-group-H{
 			white-space: nowrap;
 			.scroll-item{
 				display: inline-block;
-				margin-right: 20rpx;
+				margin: 10px;
+				border: 1px solid rgba(0, 0, 50, 0.2);
+				border-radius: 12px;
+				box-shadow: 12px 12px 2px 1px rgba(0, 0, 50, 0.2);
 			}
 		}
 	}
@@ -118,14 +125,25 @@
 				width: 100%;
 				height: 500rpx;
 			}
+			background-color: white;
+			border-radius: 16px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 		}
 	}
-	.section-title{
-		display: block;
-		text-align: center;
-		font-size: 24px;
-		font-weight: bold;
-		margin-top: 10px;
-		color: coral;
+	.section-container{
+		.section-title{
+			display: block;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			font-size: 28px;
+			color: #4a4a4a;
+			font-weight: bold;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	.scroll-item:hover {
+	    transform: scale(1.05);
+	    transition: transform 0.3s ease-in-out;
 	}
 </style>

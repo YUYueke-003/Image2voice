@@ -24,7 +24,17 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.button {
-  display: block;
-  button-align: center;
+.example-body {
+  padding: 10px;
+  padding-top: 0;
+}
+.custom-image-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  font-size: 14px;
+  color: #333;
 }

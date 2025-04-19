@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/list/list",
+    "pages/upload/upload",
     "pages/about/about"
   ],
   "subPackages": [],
@@ -23,7 +23,7 @@
       },
       {
         "text": "Upload Page",
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/upload/upload",
         "iconPath": "/static/images/upload.png",
         "selectedIconPath": "/static/images/upload_select.png"
       },

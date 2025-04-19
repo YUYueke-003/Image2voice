@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<button class="button" size="mini" type="primary" plain="true" loading="true"> confirm </button>
+		
 	</view>
 </template>
 
