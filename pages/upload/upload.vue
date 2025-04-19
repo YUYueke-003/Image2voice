@@ -3,16 +3,18 @@
 		<uni-card :is-shadow="false" is-full>
 			<text class="illustration">Select a picture or take a photo and upload it to the currently bound service space.</text>
 		</uni-card>
-		<uni-section title="Choose from album" type="line">
+		<uni-section class="section-container" title="Choose from album" type="line" title-font-size="20px">
 			<view class="add_image">
 				<uni-file-picker limit="1" title="Only one file each time"></uni-file-picker>
 			</view>
 		</uni-section>
-		 <uni-section title="Take a photo" type="line">
+		 <uni-section class="section-container" title="Take a photo" type="line" title-font-size="20px">
 			<view class="add_image">
 				<button class="take-photo-button" type="primary" @click="takePhoto">Take Photo</button>
 				<!-- Add function of image preview -->
-				<image class="preview" v-if="imagePath" :src="imagePath" mode="aspectFit"></image>
+				<view class="preview-image-container">
+					<image v-if="imagePath" :src="imagePath" mode="aspectFit"></image>
+				</view>
 			</view>
 		</uni-section>
 	</view>
@@ -50,10 +52,18 @@
 		min-height: 100vh;
 		background-color: #f0f0f0;
 	}
+	.illustration{
+		font-size: 16px;
+	}
 	.add_image{
 		padding: 10px;
 		.take-photo-button{
-			
+			margin: 10px;
+		}
+		.preview-image-container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 </style>

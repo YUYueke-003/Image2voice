@@ -155,9 +155,36 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
-    return {};
+    return {
+      authors: [{
+        name: 'YuYueke',
+        email: 'yuyueke@connect.hku.hk'
+      }, {
+        name: 'ZhaoWenzhe',
+        email: 'wayne66@connect.hku.hk'
+      }]
+    };
   }
 };
 exports.default = _default;

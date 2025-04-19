@@ -29,6 +29,17 @@ page {
   min-height: 100vh;
   background-color: #f0f0f0;
 }
+.illustration {
+  font-size: 16px;
+}
 .add_image {
   padding: 10px;
+}
+.add_image .take-photo-button {
+  margin: 10px;
+}
+.add_image .preview-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -32,46 +32,83 @@ page {
   min-height: 100vh;
   background-color: #f0f0f0;
 }
+.page-container {
+  width: 90%;
+  max-width: 600px;
+}
 .about_us {
   background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  width: 80%;
-  max-width: 600px;
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 .about_us:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
-.about_us .title {
+.project-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title {
   font-size: 34px;
   font-weight: bold;
-  text-align: center;
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 20px;
   color: rosybrown;
 }
-.about_us .bullets {
+.project-intro {
+  margin-bottom: 20px;
+}
+.body {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.target-users {
+  margin-bottom: 20px;
+}
+.bullets {
   font-size: 20px;
   font-weight: bold;
   color: black;
 }
-.about_us .bullets-body {
+.bullets-body {
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 10px;
   margin-left: 6px;
 }
-.about_us .body {
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 10px;
+.author-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
 }
-.about_us .spacer {
-  height: 10px;
+.author-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.author-info {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.author-section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+.author-list {
+  margin-bottom: 20px;
+}
+.author-name,
+.author-email {
+  display: block;
+  margin-bottom: 5px;
 }
