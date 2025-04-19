@@ -24,17 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.example-body {
+page {
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+.add_image {
   padding: 10px;
-  padding-top: 0;
-}
-.custom-image-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.text {
-  font-size: 14px;
-  color: #333;
 }
