@@ -26,7 +26,8 @@
     page {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+		margin-top: 20px;
         min-height: 100vh;
         background-color: #f0f0f0;
     }
@@ -47,7 +48,7 @@
         }
 
        .title {
-            font-size: 38px;
+            font-size: 34px;
             font-weight: bold;
             text-align: center;
             display: block;
@@ -57,20 +58,20 @@
         }
 
        .bullets {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
 			color: black;
         }
 
        .bullets-body {
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.6;
             margin-bottom: 10px;
             margin-left: 6px;
         }
 
        .body {
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.6;
             margin-bottom: 10px;
         }

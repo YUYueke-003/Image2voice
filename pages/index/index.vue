@@ -36,9 +36,9 @@
 			<view class="text-box" scroll-y="true">
 				<text>{{text}}</text>
 			</view>
-			<view class="uni-btn-v">
-				<button type="primary" :disabled="!canAdd" @click="add">Add Text</button>
-				<button type="warn" :disabled="!canRemove" @click="remove">Remove Text</button>
+			<view class="buttons">
+				<button class="line-button" type="primary" :disabled="!canAdd" @click="add">Add Text</button>
+				<button class="line-button" type="warn" :disabled="!canRemove" @click="remove">Remove Text</button>
 			</view>
 		</view>
 		
@@ -105,6 +105,14 @@
 		border: 1px solid #e0e0e0;
 		border-radius: 12px;
 		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	}
+	.buttons{
+		display: flex;
+		justify-content: center;
+	}
+	.line-button{
+		margin: 10px;
+		width: 80%;
 	}
 	.scroll{
 		.scroll-group-H{

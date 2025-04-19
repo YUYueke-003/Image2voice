@@ -10,7 +10,9 @@
 		</uni-section>
 		 <uni-section title="Take a photo" type="line">
 			<view class="add_image">
-				<button @click="takePhoto">Take Photo</button>
+				<button class="take-photo-button" type="primary" @click="takePhoto">Take Photo</button>
+				<!-- Add function of image preview -->
+				<image class="preview" v-if="imagePath" :src="imagePath" mode="aspectFit"></image>
 			</view>
 		</uni-section>
 	</view>
@@ -50,5 +52,8 @@
 	}
 	.add_image{
 		padding: 10px;
+		.take-photo-button{
+			
+		}
 	}
 </style>

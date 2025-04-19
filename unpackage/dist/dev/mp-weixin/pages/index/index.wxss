@@ -45,6 +45,14 @@ page {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.line-button {
+  margin: 10px;
+  width: 80%;
+}
 .scroll .scroll-group-H {
   white-space: nowrap;
 }
