@@ -11,10 +11,14 @@
 		 <uni-section class="section-container" title="Take a photo" type="line" title-font-size="20px">
 			<view class="add_image">
 				<button class="take-photo-button" type="primary" @click="takePhoto">Take Photo</button>
-				<!-- Add function of image preview -->
 				<view class="preview-image-container">
 					<image v-if="imagePath" :src="imagePath" mode="aspectFit"></image>
 				</view>
+			</view>
+		</uni-section>
+		<uni-section class="audio-section" title="Audio of Image Content" type="line" title-font-size="20px">
+			<view class="audio-container" v-if="voicePath">
+				<audio class="audio-bar" :src="voicePath" controls="true"></audio>
 			</view>
 		</uni-section>
 	</view>
@@ -24,7 +28,8 @@
 	export default {
 		data() {
 			return {
-				imagePath: ''
+				imagePath: '',
+				voicePath: ''
 			};
 		},
 		methods: {
@@ -65,5 +70,11 @@
 			justify-content: center;
 			align-items: center;
 		}
+	}
+	.audio-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
 	}
 </style>

@@ -15,6 +15,8 @@ def generate_caption(image_url):
 
     # 读图并处理
     image = Image.open(requests.get(image_url, stream=True).raw).convert('RGB')
+    #another way to read image
+    # image = Image.open(image_path).convert('RGB')
     inputs = processor(images=image, return_tensors="pt")
 
     # 推理生成文本
@@ -26,9 +28,11 @@ def generate_caption(image_url):
 if __name__ == "__main__":
     # 示例图像URL
     image_url = "https://storage.googleapis.com/sfr-vision-language-research/BLIP/demo.jpg"
+    # image_path = "/content/Doraemon.jpg"
     
     # 生成描述
-    caption = generate_caption(image_url)
+    # caption = generate_caption(image_path)
+	caption = generate_caption(image_url)
     
     # 打印结果
     print("Generated Caption:", caption)
