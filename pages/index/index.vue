@@ -87,22 +87,24 @@ export default {
 
             // scroller images objects
             scrollerImages: [
-                { src: '/static/images/Doraemon.jpg', text: 'a cartoon character with a heart on his chest', audio: 'doraemon_audio_url' },
-                { src: '/static/images/HelloKitty.jpg', text: 'hello kitty clipart hello kitty clipart hello kitty clipart', audio: 'hellokitty_audio_url' },
-                { src: '/static/images/winnie_friends.jpg', text: 'winnie the poo and friends', audio: 'winnie_audio_url' },
-                { src: '/static/images/cartoon_monsters.jpg', text: 'two dinosaurs sitting around a campfire', audio: 'monsters_audio_url' }
+                { src: '/static/images/Doraemon.jpg', text: 'a cartoon character with a heart on his chest', audio: '/static/speech/scroller_1.wav' },
+                { src: '/static/images/HelloKitty.jpg', text: 'hello kitty clipart hello kitty clipart hello kitty clipart', audio: '/static/speech/scroller_2.wav' },
+                { src: '/static/images/winnie_friends.jpg', text: 'winnie the poo and friends', audio: '/static/speech/scroller_3.wav' },
+                { src: '/static/images/cartoon_monsters.jpg', text: 'two dinosaurs sitting around a campfire', audio: '/static/speech/scroller_4.wav' }
             ],
             // swiper images objects
             swiperImages: [
-                { src: '/static/images/NewYorker_1.jpg', text: 'a man in a suit is standing next to a giant piano', audio: 'newyorker1_audio_url' },
-                { src: '/static/images/NewYorker_2.jpg', text: 'a man standing in front of a painting', audio: 'newyorker2_audio_url' },
-                { src: '/static/images/NewYorker_3.jpg', text: 'a woman sits at a table with a man who is talking to her', audio: 'newyorker3_audio_url' },
-                { src: '/static/images/NewYorker_4.jpg', text: 'a cartoon drawing of a man in a cloak and a woman in a cloak', audio: 'newyorker4_audio_url' }
+                { src: '/static/images/NewYorker_1.jpg', text: 'a man in a suit is standing next to a giant piano', audio: '/static/speech/swiper_1.wav' },
+                { src: '/static/images/NewYorker_2.jpg', text: 'a man standing in front of a painting', audio: '/static/speech/swiper_2.wav' },
+                { src: '/static/images/NewYorker_3.jpg', text: 'a woman sits at a table with a man who is talking to her', audio: '/static/speech/swiper_3.wav' },
+                { src: '/static/images/NewYorker_4.jpg', text: 'a cartoon drawing of a man in a cloak and a woman in a cloak', audio: '/static/speech/swiper_4.wav' }
             ],
             // selected scroller image information 
             selectedScrollerImageInfo: null,
             // selected swiper image information 
-            selectedSwiperImageInfo: null
+            selectedSwiperImageInfo: null,
+			// selected image audio
+			palyAudio: false
         }
     },
     methods: {
@@ -129,11 +131,14 @@ export default {
             this.selectedSwiperImageInfo = image;
         },
         // tap button to listen the transformed image content audio
-        playAudio(audioUrl) {
-            const innerAudioContext = uni.createInnerAudioContext();
-            innerAudioContext.src = audioUrl;
-            innerAudioContext.play();
-        }
+        playAudio(audio_src) {
+			const innerAudioContext = uni.createInnerAudioContext();
+			innerAudioContext.src = audio_src;
+			innerAudioContext.play();
+			innerAudioContext.onError((res) => {
+				console.error('Error in playing audio: ', res.errMsg);
+			});
+		}
     }
 }
 </script>
